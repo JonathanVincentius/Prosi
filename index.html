@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayang Bunda - App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Content Sections -->
+        <main class="main-content">
+            <!-- BERANDA -->
+            <section id="beranda" class="tab-content active">
+                <div class="header-card gradient-primary">
+                    <div class="header-top">
+                        <div>
+                            <h1>Halo, Mama!</h1>
+                            <p>Semoga sehat selalu</p>
+                        </div>
+                        <button class="icon-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="progress-card">
+                        <div class="progress-info">
+                            <span>Minggu Ke-24</span>
+                            <span>104 hari lagi</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 65%;"></div>
+                        </div>
+                        <p class="progress-desc">Bayi Anda seukuran buah melon!</p>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card stat-card">
+                        <div class="stat-header">
+                            <i class="fa-solid fa-arrow-trend-up text-pink"></i>
+                            <span>Berat Badan</span>
+                        </div>
+                        <h2>62.5 kg</h2>
+                        <p>+0.5 kg minggu ini</p>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-header">
+                            <i class="fa-solid fa-wave-square text-purple"></i>
+                            <span>Gerakan Bayi</span>
+                        </div>
+                        <h2>12x</h2>
+                        <p>Hari ini</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="title-with-icon">
+                            <i class="fa-solid fa-droplet text-blue"></i>
+                            <h3>Asupan Air</h3>
+                        </div>
+                        <button class="btn-circle bg-blue"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="water-info">
+                        <span>6 dari 8 gelas</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-bar-container large">
+                        <div class="progress-bar bg-blue" style="width: 75%;"></div>
+                    </div>
+                    <div class="water-glasses">
+                        <div class="glass active"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="glass active"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="glass active"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="glass active"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="glass active"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="glass active"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="glass"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="glass"><i class="fa-solid fa-droplet"></i></div>
+                    </div>
+                    <p class="card-footer-text">Ibu hamil perlu minum minimal 8 gelas air per hari</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Grafik Berat Badan</h3>
+                        <i class="fa-solid fa-arrow-trend-up text-pink"></i>
+                    </div>
+                    <div class="chart-placeholder">
+                        <img src="https://i.imgur.com/rN55K2g.png" alt="Grafik" style="width:100%; opacity: 0.8; mix-blend-mode: multiply;">
+                    </div>
+                    <div class="grid-2 mt-3" style="margin-top: 15px;">
+                        <div class="info-box">
+                            <p>Target Mingguan</p>
+                            <h4>+0.3 - 0.5 kg</h4>
+                        </div>
+                        <div class="info-box">
+                            <p>Total Kenaikan</p>
+                            <h4>+2.5 kg</h4>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="card gradient-light-pink">
+                    <div class="card-header">
+                        <div class="title-with-icon">
+                            <i class="fa-solid fa-baby text-pink"></i>
+                            <h3>Penghitung Gerakan Bayi</h3>
+                        </div>
+                        <i class="fa-solid fa-rotate-right text-gray"></i>
+                    </div>
+                    <div class="counter-display">
+                        <h1 class="text-pink">12</h1>
+                        <p>Gerakan hari ini</p>
+                    </div>
+                    <button class="btn-primary full-width mt-2"><i class="fa-solid fa-plus"></i> Catat Gerakan</button>
+                    <div class="counter-footer mt-3">
+                        <span>Gerakan terakhir:</span>
+                        <span>14:23</span>
+                    </div>
+                    <p class="card-footer-text mt-2">Normal: 10+ gerakan dalam 2 jam. Hubungi dokter jika gerakan berkurang drastis.</p>
+                </div>
+
+                <div class="card bg-pink-light">
+                    <div class="card-header">
+                         <div class="title-with-icon">
+                            <i class="fa-regular fa-face-smile text-purple"></i>
+                            <h3>Tips Hari Ini</h3>
+                        </div>
+                    </div>
+                    <p class="tip-text">Perbanyak konsumsi makanan tinggi zat besi seperti bayam, daging merah, dan kacang-kacangan untuk mencegah anemia.</p>
+                </div>
+                 <!-- Bottom spacing -->
+                 <div style="height: 80px;"></div>
+            </section>
+
+            <!-- AKTIVITAS -->
+            <section id="aktivitas" class="tab-content">
+                <div class="header-card gradient-secondary">
+                    <div class="header-top">
+                        <div>
+                            <div class="title-with-icon-header">
+                                <i class="fa-solid fa-wave-square"></i>
+                                <h1>Aktivitas Harian</h1>
+                            </div>
+                            <p>Pantau aktivitas dan kesehatan Anda</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reusing Baby Movement Counter -->
+                <div class="card gradient-light-pink">
+                    <div class="card-header">
+                        <div class="title-with-icon">
+                            <i class="fa-solid fa-baby text-pink"></i>
+                            <h3>Penghitung Gerakan Bayi</h3>
+                        </div>
+                        <i class="fa-solid fa-rotate-right text-gray"></i>
+                    </div>
+                    <div class="counter-display">
+                        <h1 class="text-pink">12</h1>
+                        <p>Gerakan hari ini</p>
+                    </div>
+                    <button class="btn-primary full-width mt-2"><i class="fa-solid fa-plus"></i> Catat Gerakan</button>
+                    <div class="counter-footer mt-3">
+                        <span>Gerakan terakhir:</span>
+                        <span>14:23</span>
+                    </div>
+                    <p class="card-footer-text mt-2">Normal: 10+ gerakan dalam 2 jam. Hubungi dokter jika gerakan berkurang drastis.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="title-with-icon">
+                            <i class="fa-solid fa-shoe-prints text-orange"></i>
+                            <h3>Olahraga Ringan</h3>
+                        </div>
+                        <button class="btn-circle bg-orange"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    
+                    <div class="activity-list">
+                        <div class="activity-item bg-orange-light">
+                            <div class="activity-icon"><img src="https://cdn-icons-png.flaticon.com/512/3228/3228066.png" alt="walk" width="24"></div>
+                            <div class="activity-details">
+                                <h4>Jalan Pagi</h4>
+                                <p>30 menit • 06:30</p>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-gray"></i>
+                        </div>
+                        <div class="activity-item bg-orange-light">
+                            <div class="activity-icon"><img src="https://cdn-icons-png.flaticon.com/512/3043/3043888.png" alt="yoga" width="24"></div>
+                            <div class="activity-details">
+                                <h4>Yoga Prenatal</h4>
+                                <p>20 menit • 16:00</p>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-gray"></i>
+                        </div>
+                    </div>
+                    <div class="info-box bg-orange-light mt-3 text-left">
+                        <p>Total Hari Ini</p>
+                        <h3>50 menit</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                     <div class="card-header">
+                        <div class="title-with-icon">
+                            <i class="fa-solid fa-moon text-blue"></i>
+                            <h3>Tidur</h3>
+                        </div>
+                    </div>
+                    <div class="sleep-display bg-blue-light">
+                        <h1 class="text-blue">7.5h</h1>
+                        <p>Tidur semalam</p>
+                    </div>
+                    <div class="water-info mt-3">
+                        <span>Target: 8 jam</span>
+                        <span>Kurang 0.5h</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar bg-dark-blue" style="width: 90%;"></div>
+                    </div>
+                    <p class="card-footer-text mt-2">Ibu hamil membutuhkan 8-9 jam tidur per malam</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="title-with-icon">
+                            <i class="fa-solid fa-heart-pulse text-brown"></i>
+                            <h3>Catat Gejala</h3>
+                        </div>
+                    </div>
+                    <div class="symptom-grid">
+                        <div class="symptom-item">
+                            <div class="symptom-icon bg-green-light"><i class="fa-solid fa-face-nauseated fa-2x text-green"></i></div>
+                            <span>Mual</span>
+                        </div>
+                        <div class="symptom-item active">
+                            <div class="symptom-icon bg-yellow-light"><i class="fa-solid fa-face-tired fa-2x text-yellow"></i></div>
+                            <span>Lelah</span>
+                            <div class="check-badge"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <div class="symptom-item">
+                            <div class="symptom-icon bg-orange-light"><i class="fa-solid fa-face-dizzy fa-2x text-orange"></i></div>
+                            <span>Pusing</span>
+                        </div>
+                        <div class="symptom-item">
+                            <div class="symptom-icon bg-yellow-light"><img src="https://cdn-icons-png.flaticon.com/512/8833/8833633.png" alt="kram" width="30"></div>
+                            <span>Kram</span>
+                        </div>
+                        <div class="symptom-item">
+                            <div class="symptom-icon bg-red-light"><i class="fa-solid fa-fire fa-2x text-red"></i></div>
+                            <span>Heartburn</span>
+                        </div>
+                        <div class="symptom-item">
+                            <div class="symptom-icon bg-blue-light"><i class="fa-solid fa-droplet fa-2x text-blue"></i></div>
+                            <span>Bengkak</span>
+                        </div>
+                    </div>
+                    <p class="card-footer-text mt-3 text-center">Catat gejala yang Anda rasakan hari ini</p>
+                </div>
+
+                <div class="card gradient-light-pink">
+                     <div class="card-header">
+                        <div class="title-with-icon">
+                            <i class="fa-regular fa-heart text-pink"></i>
+                            <h3>Detak Jantung</h3>
+                        </div>
+                    </div>
+                    <div class="counter-display bg-white">
+                        <h1 class="text-pink">78</h1>
+                        <p>bpm - Normal</p>
+                    </div>
+                    <div class="action-row mt-3">
+                        <button class="btn-primary flex-1">Ukur Sekarang</button>
+                        <button class="btn-outline-primary icon-only"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div style="height: 80px;"></div>
+            </section>
+
+            <!-- NUTRISI -->
+            <section id="nutrisi" class="tab-content">
+                <div class="header-card gradient-green">
+                    <div class="header-top">
+                        <div>
+                             <div class="title-with-icon-header">
+                                <i class="fa-solid fa-apple-whole"></i>
+                                <h1>Nutrisi</h1>
+                            </div>
+                            <p>Pantau asupan nutrisi harian Anda</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="mb-3">Target Nutrisi Harian</h3>
+                    
+                    <div class="nutrition-item">
+                        <div class="nutrition-info">
+                            <span>Protein</span>
+                            <span>65 / 75 g</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar bg-orange" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="nutrition-item">
+                        <div class="nutrition-info">
+                            <span>Serat</span>
+                            <span>28 / 30 g</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar bg-green" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                     <div class="nutrition-item">
+                        <div class="nutrition-info">
+                            <span>Zat Besi</span>
+                            <span>18 / 27 mg</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar bg-purple" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                     <div class="nutrition-item">
+                        <div class="nutrition-info">
+                            <span>Kalsium</span>
+                            <span>850 / 1000 mg</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar bg-blue" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="nutrition-item">
+                        <div class="nutrition-info">
+                            <span>Asam Folat</span>
+                            <span>520 / 600 mcg</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar bg-pink" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                     <div class="nutrition-item">
+                        <div class="nutrition-info">
+                            <span>Kalori</span>
+                            <span>1850 / 2200 kal</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar bg-orange-dark" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                     <div class="card-header">
+                        <div class="title-with-icon">
+                            <i class="fa-solid fa-apple-whole text-green"></i>
+                            <h3>Catatan Nutrisi</h3>
+                        </div>
+                        <button class="btn-circle bg-green"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+
+                    <div class="activity-list">
+                        <div class="activity-item bg-pink-lightest">
+                            <div class="color-indicator bg-orange"></div>
+                            <div class="activity-details">
+                                <h4>Oatmeal & Buah</h4>
+                                <p>Sarapan</p>
+                            </div>
+                            <span class="text-gray text-sm">07:30</span>
+                        </div>
+                        <div class="activity-item bg-pink-lightest">
+                            <div class="color-indicator bg-green"></div>
+                            <div class="activity-details">
+                                <h4>Salad Sayur</h4>
+                                <p>Makan Siang</p>
+                            </div>
+                            <span class="text-gray text-sm">12:00</span>
+                        </div>
+                        <div class="activity-item bg-pink-lightest">
+                            <div class="color-indicator bg-purple"></div>
+                            <div class="activity-details">
+                                <h4>Yogurt & Kacang</h4>
+                                <p>Snack</p>
+                            </div>
+                            <span class="text-gray text-sm">15:30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="height: 80px;"></div>
+            </section>
+
+             <!-- JADWAL -->
+             <section id="jadwal" class="tab-content">
+                <div class="header-card gradient-primary">
+                    <div class="header-top">
+                        <div>
+                             <div class="title-with-icon-header">
+                                <i class="fa-regular fa-calendar"></i>
+                                <h1>Jadwal Kontrol</h1>
+                            </div>
+                            <p>Kelola jadwal pemeriksaan kehamilan Anda</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: -20px; background: transparent; box-shadow: none; padding: 0 20px;">
+                    <button class="btn-primary full-width"><i class="fa-solid fa-plus"></i> Tambah Jadwal Baru</button>
+                </div>
+
+                <div class="card">
+                    <h3 class="mb-3">Jadwal Mendatang</h3>
+                    
+                    <div class="schedule-card bg-pink-lightest">
+                        <div class="schedule-date gradient-primary">
+                            <span>Mei</span>
+                            <h2>08</h2>
+                        </div>
+                        <div class="schedule-details">
+                            <div class="schedule-header-row">
+                                <h4>Pemeriksaan Rutin</h4>
+                                <i class="fa-solid fa-bell text-pink"></i>
+                            </div>
+                            <p><i class="fa-regular fa-user text-gray"></i> Dr. Sarah Wijaya, SpOG</p>
+                            <p><i class="fa-regular fa-clock text-gray"></i> 10:00 WIB</p>
+                            <p><i class="fa-solid fa-location-dot text-gray"></i> RS Bunda Sehat, Lt. 3</p>
+                            <div class="schedule-footer">
+                                <span>Lihat Detail</span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-card bg-purple-lightest">
+                        <div class="schedule-date gradient-purple">
+                            <span>Mei</span>
+                            <h2>15</h2>
+                        </div>
+                        <div class="schedule-details">
+                            <div class="schedule-header-row">
+                                <h4>USG 4D</h4>
+                                <i class="fa-solid fa-bell text-pink"></i>
+                            </div>
+                            <p><i class="fa-regular fa-user text-gray"></i> Dr. Michael Chen, SpOG</p>
+                            <p><i class="fa-regular fa-clock text-gray"></i> 14:00 WIB</p>
+                            <p><i class="fa-solid fa-location-dot text-gray"></i> Klinik Bunda Harapan</p>
+                            <div class="schedule-footer">
+                                <span>Lihat Detail</span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-card bg-blue-lightest">
+                        <div class="schedule-date gradient-blue">
+                            <span>Mei</span>
+                            <h2>20</h2>
+                        </div>
+                        <div class="schedule-details">
+                            <div class="schedule-header-row">
+                                <h4>Tes Lab Darah</h4>
+                                <i class="fa-regular fa-bell text-gray"></i>
+                            </div>
+                            <p><i class="fa-regular fa-user text-gray"></i> Lab Klinik Prodia</p>
+                            <p><i class="fa-regular fa-clock text-gray"></i> 08:00 WIB</p>
+                            <p><i class="fa-solid fa-location-dot text-gray"></i> Prodia Cabang Sudirman</p>
+                            <div class="schedule-footer">
+                                <span>Lihat Detail</span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="mb-3">Kalender Mei 2026</h3>
+                    <div class="calendar-grid">
+                        <div class="cal-header">Min</div>
+                        <div class="cal-header">Sen</div>
+                        <div class="cal-header">Sel</div>
+                        <div class="cal-header">Rab</div>
+                        <div class="cal-header">Kam</div>
+                        <div class="cal-header">Jum</div>
+                        <div class="cal-header">Sab</div>
+
+                        <div class="cal-day empty"></div>
+                        <div class="cal-day empty"></div>
+                        <div class="cal-day empty"></div>
+                        <div class="cal-day empty"></div>
+                        <div class="cal-day empty"></div>
+                        <div class="cal-day">1</div>
+                        <div class="cal-day">2</div>
+                        
+                        <div class="cal-day active">3</div>
+                        <div class="cal-day">4</div>
+                        <div class="cal-day">5</div>
+                        <div class="cal-day">6</div>
+                        <div class="cal-day">7</div>
+                        <div class="cal-day scheduled">8</div>
+                        <div class="cal-day">9</div>
+
+                        <div class="cal-day">10</div>
+                        <div class="cal-day">11</div>
+                        <div class="cal-day">12</div>
+                        <div class="cal-day">13</div>
+                        <div class="cal-day">14</div>
+                        <div class="cal-day scheduled">15</div>
+                        <div class="cal-day">16</div>
+
+                        <div class="cal-day">17</div>
+                        <div class="cal-day">18</div>
+                        <div class="cal-day">19</div>
+                        <div class="cal-day scheduled">20</div>
+                        <div class="cal-day">21</div>
+                        <div class="cal-day">22</div>
+                        <div class="cal-day">23</div>
+
+                        <div class="cal-day">24</div>
+                        <div class="cal-day">25</div>
+                        <div class="cal-day">26</div>
+                        <div class="cal-day">27</div>
+                        <div class="cal-day">28</div>
+                        <div class="cal-day">29</div>
+                        <div class="cal-day">30</div>
+                        
+                        <div class="cal-day">31</div>
+                    </div>
+                    <div class="calendar-legend mt-3">
+                        <div class="legend-item">
+                            <div class="legend-color bg-pink"></div>
+                            <span>Hari ini</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-outline"></div>
+                            <span>Ada jadwal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-orange-light">
+                    <div class="card-header">
+                        <div class="title-with-icon">
+                            <div class="icon-circle-small bg-white"><i class="fa-regular fa-bell text-orange"></i></div>
+                            <h3>Pengingat Penting</h3>
+                        </div>
+                    </div>
+                    <ul class="reminder-list">
+                        <li>Puasa 8-12 jam sebelum tes lab darah</li>
+                        <li>Minum air putih 2 gelas sebelum USG</li>
+                        <li>Bawa hasil lab sebelumnya</li>
+                    </ul>
+                </div>
+
+                 <div style="height: 80px;"></div>
+             </section>
+
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active" data-target="beranda">
+                <i class="fa-solid fa-heart"></i>
+                <span>Beranda</span>
+            </a>
+            <a href="#" class="nav-item" data-target="aktivitas">
+                <i class="fa-solid fa-wave-square"></i>
+                <span>Aktivitas</span>
+            </a>
+            <a href="#" class="nav-item" data-target="nutrisi">
+                <i class="fa-solid fa-apple-whole"></i>
+                <span>Nutrisi</span>
+            </a>
+            <a href="#" class="nav-item" data-target="jadwal">
+                <i class="fa-regular fa-calendar"></i>
+                <span>Jadwal</span>
+            </a>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
