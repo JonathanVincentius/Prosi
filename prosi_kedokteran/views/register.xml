@@ -65,14 +65,26 @@
 
                             <div class="mb-4">
                                 <label class="form-label-custom d-block mb-2">Riwayat Obstetri</label>
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge-obstetri active">Kehamilan</span>
-                                    <span class="badge-obstetri">Melahirkan</span>
-                                    <span class="badge-obstetri">Keguguran</span>
+                                
+                                <input type="checkbox" id="check_pregnancy" class="obstetri-check-hidden"/>
+                                <input type="checkbox" id="check_birth" class="obstetri-check-hidden"/>
+                                <input type="checkbox" id="check_miscarriage" class="obstetri-check-hidden"/>
+
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <label for="check_pregnancy" class="badge-obstetri label-pregnancy">Kehamilan</label>
+                                    <label for="check_birth" class="badge-obstetri label-birth">Melahirkan</label>
+                                    <label for="check_miscarriage" class="badge-obstetri label-miscarriage">Keguguran</label>
                                 </div>
-                                <input type="number" name="count_pregnancy" class="form-control-custom mb-2" placeholder="Jml Kehamilan"/>
-                                <input type="number" name="count_birth" class="form-control-custom mb-2" placeholder="Jml Melahirkan"/>
-                                <input type="number" name="count_miscarriage" class="form-control-custom" placeholder="Jml Keguguran"/>
+
+                                <div class="input-pregnancy-box mb-2">
+                                    <input type="number" name="count_pregnancy" class="form-control-custom" placeholder="Jml Kehamilan"/>
+                                </div>
+                                <div class="input-birth-box mb-2">
+                                    <input type="number" name="count_birth" class="form-control-custom" placeholder="Jml Melahirkan"/>
+                                </div>
+                                <div class="input-miscarriage-box">
+                                    <input type="number" name="count_miscarriage" class="form-control-custom" placeholder="Jml Keguguran"/>
+                                </div>
                             </div>
 
                             <div class="mb-5">

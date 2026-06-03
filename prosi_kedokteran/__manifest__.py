@@ -3,7 +3,7 @@
     'version': '19.0.1.0.0', 
     'category': 'Medical',
     'summary': 'Modul untuk manajemen sistem kedokteran',
-    'depends': ['base'],     
+    'depends': ['base', 'website'],      
     'data': [
         #'security/ir.model.access.csv',
         'views/welcome.xml',

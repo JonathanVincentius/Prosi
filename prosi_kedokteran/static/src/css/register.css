@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-
+/* Header melengkung penuh pink */
 .register-header {
     background-color: #E96479;
     padding: 30px 0;
@@ -22,7 +22,7 @@ body {
     margin-bottom: 5px;
 }
 
-
+/* Gaya Label Utama */
 .form-label-custom {
     color: #555555;
     font-weight: 500;
@@ -30,7 +30,7 @@ body {
     margin-bottom: 8px;
 }
 
-
+/* Kotak Input */
 .form-control-custom {
     width: 100%;
     padding: 12px 18px;
@@ -48,7 +48,15 @@ body {
     background-color: #fffcfc;
 }
 
+/* =================================================== */
+/* FIX ATURAN CSS: SEJAJAR SELECTOR SHOW/HIDE          */
+/* =================================================== */
 
+.obstetri-check-hidden {
+    display: none !important; /* Menyembunyikan checkbox asli browser */
+}
+
+/* Base style tombol pil badge */
 .badge-obstetri {
     padding: 8px 16px;
     border-radius: 20px;
@@ -56,22 +64,46 @@ body {
     background-color: #ffffff;
     color: #E96479;
     border: 1.5px solid #f3d1d6;
-    cursor: pointer;
     display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
 }
 
-/* .badge-obstetri.active {
-    background-color: #fbebed;
+/* Mengubah warna background pil secara spesifik saat checkbox di atasnya :checked */
+#check_pregnancy:checked ~ div .label-pregnancy,
+#check_birth:checked ~ div .label-birth,
+#check_miscarriage:checked ~ div .label-miscarriage {
+    background-color: #E96479 !important;
+    color: #ffffff !important;
     font-weight: bold;
-    border-color: #E96479;
-} */
+    border-color: #E96479 !important;
+}
 
+/* Sembunyikan form input jumlah secara default */
+.input-pregnancy-box,
+.input-birth-box,
+.input-miscarriage-box {
+    display: none;
+    opacity: 0;
+}
+
+/* Tampilkan kotak input dengan selector tilde (~) sejajar */
+#check_pregnancy:checked ~ .input-pregnancy-box,
+#check_birth:checked ~ .input-birth-box,
+#check_miscarriage:checked ~ .input-miscarriage-box {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+/* =================================================== */
+/* KARTU PILIHAN FASE UTAMA                            */
+/* =================================================== */
 
 .fase-radio-hidden {
     display: none;
 }
 
-/* Kartu Fase Pilihan */
 .fase-card {
     background-color: #ffffff;
     border: 1.5px solid #eededb;
@@ -92,7 +124,6 @@ body {
     color: #666666;
 }
 
-/* Efek ketika fase aktif terpilih */
 .fase-radio-hidden:checked + .fase-card {
     background-color: #fbebed;
     border: 2px solid #E96479;
@@ -103,12 +134,13 @@ body {
     font-weight: bold;
 }
 
-/* Tombol Kirim */
+/* Tombol Submit Kirim */
 .btn-submit-custom {
+    width: 100%;
     background-color: #E96479;
     color: #ffffff;
     border: none;
-    padding: 12px 35px;
+    padding: 14px;
     font-weight: bold;
     border-radius: 25px;
     font-size: 15px;
