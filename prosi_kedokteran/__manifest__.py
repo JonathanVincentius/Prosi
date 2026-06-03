@@ -6,8 +6,8 @@
     'depends': ['base'],     
     'data': [
         #'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/register.xml',
+        'views/login.xml',
     ],
     'installable': True,
     'application': True,     

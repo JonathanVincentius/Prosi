@@ -1,0 +1,18 @@
+body {
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+    min-height: 100vh;
+}
+.login-box {
+    border-radius: 15px;
+    border: none;
+    background-color: #ffffff;
+}
+.btn-success {
+    background-color: #10b981;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+}
+.btn-success:hover {
+    background-color: #059669;
+}
