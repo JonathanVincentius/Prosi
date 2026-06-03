@@ -4,36 +4,130 @@
             <html>
                 <head>
                     <title>Registrasi - Prosi Kedokteran</title>
+                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+                    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
                     <link rel="stylesheet" href="/prosi_kedokteran/static/src/css/register.css"/>
                 </head>
                 <body>
-                    <div class="container">
-                        <div class="card login-box shadow p-4" style="max-width: 450px; margin: 80px auto;">
-                            <h3 class="text-center mb-4">Pendaftaran Akun</h3>
-                            
-                            <form action="/kedokteran/register/submit" method="post">
-                                <div class="mb-3">
+                    <!-- Header -->
+                    <div class="register-header">
+                        <div class="container-header">
+                            <div class="d-flex align-items-start gap-3">
+                                <a href="/kedokteran/welcome" class="back-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                                        <polyline points="12 19 5 12 12 5"></polyline>
+                                    </svg>
+                                </a>
+                                <div class="header-text-group">
+                                    <h1 class="header-title">Daftar Akun Baru</h1>
+                                    <p class="header-subtitle">Bergabung bersama 50.000+ Bunda!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Container -->
+                    <div class="register-form-wrapper">
+                        <form action="/kedokteran/register/submit" method="post" class="register-form">
+                                <!-- Nama Lengkap -->
+                                <div class="form-group mb-3">
                                     <label class="form-label">Nama Lengkap</label>
-                                    <input type="text" name="name" class="form-control" required="required"/>
+                                    <input type="text" name="name" class="form-control" placeholder="Siti Rahayu" required="required"/>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Email / Username Baru</label>
-                                    <input type="text" name="login" class="form-control" required="required"/>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control" required="required"/>
-                                </div>
-                                <button type="submit" class="btn btn-success w-100">Daftar Sekarang</button>
                                 
-                                <div class="text-center mt-3">
-                                    <a href="/kedokteran/login" class="text-decoration-none">Sudah punya akun? Login di sini</a>
+                                <!-- Username -->
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" name="login" class="form-control" placeholder="sitirahayu" required="required"/>
+                                </div>
+                                
+                                <!-- Password -->
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" name="password" class="form-control" placeholder="••••••••" required="required"/>
+                                </div>
+                                
+                                <!-- Tanggal Lahir -->
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Tanggal Lahir</label>
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <input type="text" name="birth_day" class="form-control text-center" placeholder="HH" maxlength="2"/>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" name="birth_month" class="form-control text-center" placeholder="BB" maxlength="2"/>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" name="birth_year" class="form-control text-center" placeholder="TTTT" maxlength="4"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- No. Telpon -->
+                                <div class="form-group mb-3">
+                                    <label class="form-label">No. Telpon</label>
+                                    <input type="text" name="phone" class="form-control" placeholder="0812xxxx"/>
+                                </div>
+                                
+                                <!-- Alamat Tempat Tinggal -->
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Alamat Tempat Tinggal</label>
+                                    <textarea name="address" class="form-control" placeholder="Jl. Mawar No 1..."></textarea>
+                                </div>
+                                
+                                <!-- Riwayat Obstetri -->
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Riwayat Obstetri</label>
+                                    <div class="d-flex gap-2 flex-wrap mb-3">
+                                        <span class="static-pill">Kehamilan</span>
+                                        <span class="static-pill">Melahirkan</span>
+                                        <span class="static-pill">Keguguran</span>
+                                    </div>
+                                    <input type="number" name="gravida" class="form-control mb-2" placeholder="Jml Kehamilan" required="required" min="0"/>
+                                    <input type="number" name="para" class="form-control mb-2" placeholder="Jml Melahirkan" required="required" min="0"/>
+                                    <input type="number" name="aborta" class="form-control" placeholder="Jml Keguguran" required="required" min="0"/>
+                                </div>
+                                
+                                <!-- Fase Anda -->
+                                <div class="form-group mb-4">
+                                    <label class="form-label">Anda sedang dalam fase apa?</label>
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <input type="radio" name="fase" value="pra_kehamilan" id="fase_pra" class="fase-radio d-none"/>
+                                            <label for="fase_pra" class="fase-card">
+                                                <span class="fase-emoji">💑</span>
+                                                <span class="fase-text">Pra-Kehamilan</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="radio" name="fase" value="sedang_hamil" id="fase_hamil" class="fase-radio d-none" checked="checked"/>
+                                            <label for="fase_hamil" class="fase-card">
+                                                <span class="fase-emoji">🤰</span>
+                                                <span class="fase-text">Sedang Hamil</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="radio" name="fase" value="punya_bayi" id="fase_bayi" class="fase-radio d-none"/>
+                                            <label for="fase_bayi" class="fase-card">
+                                                <span class="fase-emoji">👩‍🍼</span>
+                                                <span class="fase-text">Punya Bayi</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submit Button -->
+                                <div class="mt-4">
+                                    <button type="submit" class="btn btn-submit">
+                                        Daftar Sekarang <span class="arrow">→</span>
+                                    </button>
                                 </div>
                             </form>
                         </div>
-                    </div>
-                </body>
+                    </body>
             </html>
         </template>
     </data>
