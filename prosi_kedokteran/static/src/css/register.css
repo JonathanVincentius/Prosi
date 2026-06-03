@@ -1,18 +1,121 @@
 body {
-    background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
-    min-height: 100vh;
+    background-color: #fdfbf7;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.login-box {
-    border-radius: 15px;
-    border: none;
+
+
+.register-header {
+    background-color: #E96479;
+    padding: 30px 0;
+    color: #ffffff;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.back-link {
+    color: #ffffff !important;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+.form-label-custom {
+    color: #555555;
+    font-weight: 500;
+    font-size: 14.5px;
+    margin-bottom: 8px;
+}
+
+
+.form-control-custom {
+    width: 100%;
+    padding: 12px 18px;
+    border: 1.5px solid #eededb;
     background-color: #ffffff;
+    border-radius: 14px;
+    color: #333333;
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
-.btn-success {
-    background-color: #10b981;
-    border: none;
-    padding: 10px;
+
+.form-control-custom:focus {
+    outline: none;
+    border-color: #E96479;
+    background-color: #fffcfc;
+}
+
+
+.badge-obstetri {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13.5px;
+    background-color: #ffffff;
+    color: #E96479;
+    border: 1.5px solid #f3d1d6;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* .badge-obstetri.active {
+    background-color: #fbebed;
+    font-weight: bold;
+    border-color: #E96479;
+} */
+
+
+.fase-radio-hidden {
+    display: none;
+}
+
+/* Kartu Fase Pilihan */
+.fase-card {
+    background-color: #ffffff;
+    border: 1.5px solid #eededb;
+    border-radius: 16px;
+    padding: 15px 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fase-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.fase-text {
+    font-size: 11px;
+    font-weight: 500;
+    color: #666666;
+}
+
+/* Efek ketika fase aktif terpilih */
+.fase-radio-hidden:checked + .fase-card {
+    background-color: #fbebed;
+    border: 2px solid #E96479;
+}
+
+.fase-radio-hidden:checked + .fase-card .fase-text {
+    color: #E96479;
     font-weight: bold;
 }
-.btn-success:hover {
-    background-color: #059669;
+
+/* Tombol Kirim */
+.btn-submit-custom {
+    background-color: #E96479;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    font-weight: bold;
+    border-radius: 25px;
+    font-size: 15px;
+    box-shadow: 0 4px 10px rgba(233, 100, 121, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-submit-custom:hover {
+    background-color: #d65267;
 }

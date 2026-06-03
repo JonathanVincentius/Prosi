@@ -3,6 +3,12 @@ from odoo.http import request
 
 class ProsiKedokteranWeb(http.Controller):
 
+    # 0. HALAMAN UTAMA (WELCOME PAGE)
+    @http.route('/kedokteran', type='http', auth='public', website=True)
+    def welcome_page(self, **kw):
+        """Menampilkan halaman awal BundaSehat"""
+        return request.render('prosi_kedokteran.custom_welcome_template', {})
+
     
     # 1. HALAMAN LOGIN 
     
